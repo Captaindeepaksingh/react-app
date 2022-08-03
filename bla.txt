@@ -1,0 +1,20 @@
+00f8651535024c86ad52e789e8dfeab1
+/v2/top-headlines
+static defaultProps = {
+    country: 'in',
+    pageSize:8
+  }
+    static propTypes = {
+      country: this.propTypes.string,
+      pageSize:this.propTypes.number
+    }
+
+
+
+    <News  pageSize={5} country="in" category="science" />
+    import News from './component/News';
+    <InfiniteScroll
+                    dataLength={articles.length}
+                    next={fetchMoreData}
+                    hasMore={articles.length !== totalResults}
+                    loader={<h4>loading...</h4>}
